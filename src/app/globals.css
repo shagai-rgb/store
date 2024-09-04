@@ -7,3 +7,30 @@ body {
   align-items: center;
   width: screen;
 }
+.star-rating {
+  display: flex;
+  direction: row;
+}
+
+.star-wrapper {
+  position: relative;
+}
+
+.star-back {
+  fill: #e4e5e9;
+}
+
+.star-front {
+  fill: #ffc107;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+
+  /* Hide scrollbar for IE, Edge, and Firefox */
+  -ms-overflow-style: "none"; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

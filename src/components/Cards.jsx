@@ -1,11 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import StarRating from "./StarRating";
 
 export const Cards = ({ id, title, rating, image, price }) => {
   const [hover, isHover] = useState(false);
 
   return (
-    <div className="w-[270px] flex flex-col h-[350px] border rounded">
+    <div className="w-[270px] snap-start flex flex-col h-[350px] border rounded">
       <div
         onMouseEnter={() => {
           isHover(true);
@@ -30,11 +31,12 @@ export const Cards = ({ id, title, rating, image, price }) => {
           Add To Cart
         </div>
       </div>
-
       <div className="text-base font-normal">{title}</div>
       <div className="text-base font-medium text-[#DB4444]">${price}</div>
       <div className="flex gap-2 items-center">
-        <div>{rating.rate}</div>
+        <div>
+          <StarRating rating={rating.rate} />
+        </div>
         <div className="opacity-50 font-semibold text-sm">({rating.count})</div>
       </div>
     </div>
