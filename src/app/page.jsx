@@ -4,7 +4,6 @@ import { Category } from "@/components/Category";
 import { ExclusiveBot } from "@/components/ExclusiveBot";
 import { Featured } from "@/components/Featured";
 import { OurProduct } from "@/components/OurProduct";
-import ScrollPage from "@/components/ScrollPage";
 import { ThisMonth } from "@/components/ThisMonth";
 import { Today } from "@/components/Today";
 

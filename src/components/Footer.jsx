@@ -20,7 +20,7 @@ export const Footer = () => {
               placeholder="Enter your email"
             />
             <button>
-              <img src="footer/image.png" className="w-6 h-6" alt="" />
+              <img src="/footer/image.png" className="w-6 h-6" alt="" />
             </button>
           </div>
         </div>
@@ -58,15 +58,15 @@ export const Footer = () => {
               Save $3 with App New User Only
             </h1>
             <div className="flex gap-2">
-              <img src="footer/image-qr.png" className="w-20 h-20" alt="" />
+              <img src="/footer/image-qr.png" className="w-20 h-20" alt="" />
               <div className=" flex flex-col gap-1">
                 <img
-                  src="footer/google-play.png"
+                  src="/footer/google-play.png"
                   className="w-[110px] h-10"
                   alt=""
                 />
                 <img
-                  src="footer/app-store.png"
+                  src="/footer/app-store.png"
                   className="w-[110px] h-10"
                   alt=""
                 />
@@ -74,10 +74,10 @@ export const Footer = () => {
             </div>
           </div>
           <div className="flex gap-6">
-            <img src="footer/icon-fb.png" className="w-6 h-6" alt="" />
-            <img src="footer/icon-twit.png" className="w-6 h-6" alt="" />
-            <img src="footer/icon-ig.png" className="w-6 h-6" alt="" />
-            <img src="footer/icon-link.png" className="w-6 h-6" alt="" />
+            <img src="/footer/icon-fb.png" className="w-6 h-6" alt="" />
+            <img src="/footer/icon-twit.png" className="w-6 h-6" alt="" />
+            <img src="/footer/icon-ig.png" className="w-6 h-6" alt="" />
+            <img src="/footer/icon-link.png" className="w-6 h-6" alt="" />
           </div>
         </div>
       </div>

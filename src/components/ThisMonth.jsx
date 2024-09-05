@@ -6,13 +6,12 @@ import { Cards } from "./Cards";
 
 export const ThisMonth = ({ posts }) => {
   const [data, setData] = useState(posts.slice(0, 4));
-  const [istrue, setIstrue] = useState(false);
+  const [istrue, setIstrue] = useState(true);
   const allClick = () => {
     setIstrue((prev) => !prev);
-  };
-  useEffect(() => {
     istrue ? setData(posts) : setData(posts.slice(0, 4));
-  });
+  };
+
   return (
     <div className="w-screen flex mt-[140px] flex-col items-center">
       <div className="w-[1170px] flex justify-between items-end h-[103px]">

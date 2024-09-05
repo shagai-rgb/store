@@ -15,8 +15,8 @@ const StarRating = ({ rating = 0, totalStars = 5 }) => {
         <div key={index} className="star-wrapper">
           <svg
             className="star-back"
-            width="24"
-            height="24"
+            width="20"
+            height="20"
             viewBox="0 0 24 24"
             fill="#e4e5e9"
           >
@@ -24,8 +24,8 @@ const StarRating = ({ rating = 0, totalStars = 5 }) => {
           </svg>
           <svg
             className="star-front"
-            width="24"
-            height="24"
+            width="20"
+            height="20"
             viewBox="0 0 24 24"
             fill="#ffc107"
             style={{

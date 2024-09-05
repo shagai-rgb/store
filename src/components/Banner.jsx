@@ -6,6 +6,7 @@ export const Banner = () => {
     <div className="w-[1170px] mt-[140px] h-[500px] justify-center gap-[40px] bg-black flex relative flex-col pl-[56px]">
       <div className="flex flex-col gap-[32px]">
         <div className="text-[#00FF66]">Categories</div>
+
         <div className="text-5xl text-white font-semibold w-[443px] text-wrap">
           Enhance Your Music Experience
         </div>
@@ -32,12 +33,12 @@ export const Banner = () => {
         </div>
       </div>
       <img
-        src="banner/image.png"
+        src="/banner/image.png"
         className="absolute w-[620px] z-10 h-[420px] left-[526px]"
         alt=""
       />
       <img
-        src="banner/image1.png"
+        src="/banner/image1.png"
         className="absolute w-[500px] z-0 h-[500px] left-[552px]"
         alt=""
       />

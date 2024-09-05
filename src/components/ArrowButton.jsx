@@ -1,4 +1,7 @@
 "use client";
+import { FaArrowLeft } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
+
 import React from "react";
 
 export const ArrowButton = ({ left, rigth }) => {
@@ -8,11 +11,11 @@ export const ArrowButton = ({ left, rigth }) => {
         onClick={rigth}
         className="bg-[#F5F5F5] cursor-pointer flex items-center justify-center rounded-full w-[46px] h-[46px]"
       >
-        <img src="today/image.png" className="w-6 h-6" alt="" />
+        <FaArrowLeft className="w-6 h-6" />
       </div>
       <div onClick={left} className=" w-[46px] h-[46px]">
         <div className="bg-[#F5F5F5]  cursor-pointer  flex items-center justify-center rounded-full w-[46px] h-[46px]">
-          <img src="today/image1.png" className="w-6 h-6" alt="" />
+          <FaArrowRight className="w-6 h-6" />
         </div>
       </div>
     </div>

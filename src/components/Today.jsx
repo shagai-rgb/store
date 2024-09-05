@@ -1,11 +1,54 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Cards } from "./Cards";
 import { RedButton } from "./RedButton";
 import { RedHead } from "./RedHead";
 import { ArrowButton } from "./ArrowButton";
 
 export const Today = ({ posts }) => {
+  const [timer, setTimer] = useState({
+    days: 15,
+    hour: 10,
+    minutes: 20,
+    seconds: 59,
+  });
+
+  useEffect(() => {
+    let inter;
+
+    const timer = () => {
+      setTimer((prev) => {
+        let days = prev.days;
+        let hour = prev.hour;
+        let minutes = prev.minutes;
+        let seconds = prev.seconds;
+        seconds--;
+
+        if (seconds === 0) {
+          minutes = minutes - 1;
+          seconds = 59;
+        }
+
+        if (minutes === 0) {
+          hour = hour - 1;
+          minutes = 59;
+        }
+
+        if (hour === 0) {
+          days = days - 1;
+          hour = 23;
+        }
+
+        return { seconds: seconds, minutes: minutes, hour: hour, days: days };
+      });
+    };
+
+    inter = setInterval(timer, 1000);
+
+    return () => {
+      clearInterval(inter);
+    };
+  }, []);
   const scrollContainerRef = useRef(null);
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
@@ -29,22 +72,22 @@ export const Today = ({ posts }) => {
             <div className="flex gap-[17px] mb-[-6px] items-center">
               <div className="flex flex-col">
                 <div className="text-xs font-medium">Days</div>
-                <div className="text-[32px] font-bold">03</div>
+                <div className="text-[32px] font-bold">{timer.days}</div>
               </div>
               <div className="text-[#E07575] text-[32px] font-bold mt-1">:</div>
               <div className="flex flex-col">
                 <div className="text-xs font-medium">Hours</div>
-                <div className="text-[32px] font-bold">03</div>
+                <div className="text-[32px] font-bold">{timer.hour}</div>
               </div>
               <div className="text-[#E07575] text-[32px] font-bold mt-1">:</div>
               <div className="flex flex-col">
                 <div className="text-xs font-medium">Minutes</div>
-                <div className="text-[32px] font-bold">03</div>
+                <div className="text-[32px] font-bold">{timer.minutes}</div>
               </div>
               <div className="text-[#E07575] text-[32px] font-bold mt-1">:</div>
               <div className="flex flex-col">
                 <div className="text-xs font-medium">Seconds</div>
-                <div className="text-[32px] font-bold">03</div>
+                <div className="text-[32px] font-bold">{timer.seconds}</div>
               </div>
             </div>
           </div>
@@ -57,16 +100,14 @@ export const Today = ({ posts }) => {
       >
         {posts.map(({ id, title, price, image, rating }, index) => {
           return (
-            <Link href="/list">
-              <Cards
-                key={index}
-                id={id}
-                title={title}
-                price={price}
-                image={image}
-                rating={rating}
-              />
-            </Link>
+            <Cards
+              key={index}
+              id={id}
+              title={title}
+              price={price}
+              image={image}
+              rating={rating}
+            />
           );
         })}
       </div>

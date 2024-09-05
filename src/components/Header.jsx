@@ -13,7 +13,7 @@ export const Header = () => {
         </div>
         <div className="w-[78px] h-[24px] text-white flex gap-[5px]">
           <button>English</button>
-          <img src="header/image.png" className="w-6 h-6" alt="" />
+          <img src="/header/image.png" className="w-6 h-6" alt="" />
         </div>
       </div>
     </div>
