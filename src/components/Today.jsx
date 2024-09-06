@@ -96,7 +96,7 @@ export const Today = ({ posts }) => {
       </div>
       <div
         ref={scrollContainerRef}
-        className="w-[1170px] scrollbar-hide mt-10 overflow-x-scroll snap-x gap-[30px] flex justify-between"
+        className="w-[1170px] scrollbar-hide mt-10 overflow-x-scroll snap-x gap-[30px] scrollbar flex justify-between"
       >
         {posts.map(({ id, title, price, image, rating }, index) => {
           return (

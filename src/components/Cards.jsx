@@ -30,7 +30,7 @@ export const Cards = ({ id, title, rating, image, price }) => {
           </div>
           <img
             src={image}
-            className="w-auto h-[150px] bg-slate-400 mt-10"
+            className="w-auto h-[150px] mix-blend-darken bg-slate-400 mt-10"
             alt=""
           />
           <div
